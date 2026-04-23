@@ -25,7 +25,7 @@ def classify_products(input_file="amazon_products_local.json", output_file="amaz
         elif any(x in title for x in ["headset", "fone", "áudio"]):
             category = "Headsets & Áudio"
             
-        elif any(x in title for x in ["cabo", "cable", "usb", "suporte", "base", "carregamento", "ssd", "unidade de disco", "vr2", "portal remote", "lcd"]):
+        elif any(x in title for x in ["cabo", "cable", "usb", "suporte", "base", "carregamento", "ssd", "unidade de disco", "vr2", "portal remote", "lcd", "mouse"]):
             category = "Acessórios & Hardware"
             
         # Puxamos atributos inconfundíveis de Console ANTES de Controle

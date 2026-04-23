@@ -141,4 +141,27 @@ function renderChart(stats, canvasId) {
     });
 }
 
-document.addEventListener('DOMContentLoaded', initDashboard);
+document.addEventListener('DOMContentLoaded', () => {
+    initDashboard();
+
+    // Search Filtering mechanism
+    const searchInput = document.getElementById('search-input');
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            const cards = document.querySelectorAll('.card');
+            
+            cards.forEach(card => {
+                const titleElement = card.querySelector('.variant-title');
+                if (titleElement) {
+                    const titleText = titleElement.innerText.toLowerCase();
+                    if (titleText.includes(term)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+        });
+    }
+});

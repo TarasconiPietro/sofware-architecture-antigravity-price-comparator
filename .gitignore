@@ -1,0 +1,27 @@
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments (Dependências locais)
+venv/
+.venv/
+env/
+.env/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Banco de Dados local gerado pelo projeto
+*.db
+amazon_offers_history.db
+
+# Arquivos locais e de debug gerados pelo projeto
+*.json
+!amazon_classified.json 
+# (Ignorando jsons gerados, mas se amazon_classified.json for sua base inicial, você pode remover o '!' se ele for gerado dinamicamente)
+debug_amazon.html
+
+# Ferramentas e IDEs
+.vscode/
+.idea/
+.DS_Store
